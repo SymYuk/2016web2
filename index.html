@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>タイトル</title>
+	<script type="text/javascript" src="fttps://code.jquert.com/jquert-3.1.0.min.js"></script>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -34,8 +35,44 @@
 			</div>
 		</div>
 	</nav>
-	ああああああああああああああああああああああああああああああああああああああいいいい
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    countDown();
+  });
+  function countDown() {
+  var startDateTime = new Date();
+  var endDateTime = new Date("January 24,2017 15:00:00");
+  var left = endDateTime - startDateTime;
+  var a_day = 24 * 60 * 60 * 1000;
+
+// 期限から現在までの『残時間の日の部分』
+  var d = Math.floor(left / a_day) 
+
+// 期限から現在までの『残時間の時間の部分』
+  var h = Math.floor((left % a_day) / (60 * 60 * 1000)) 
+
+// 残時間を秒で割って残分数を出す。
+// 残分数を60で割ることで、残時間の「時」の余りとして、『残時間の分の部分』を出す
+  var m = Math.floor((left % a_day) / (60 * 1000)) % 60 
+
+// 残時間をミリ秒で割って、残秒数を出す。
+// 残秒数を60で割った余りとして、「秒」の余りとしての残「ミリ秒」を出す。
+// 更にそれを60で割った余りとして、「分」で割った余りとしての『残時間の秒の部分』を出す
+  var s = Math.floor((left % a_day) / 1000) % 60 % 60 
+
+  $("#TimeLeft").text(d + '日' + h + '時間' + m + '分' + s + '秒');
+    setTimeout('countDown()', 1000);
+  }
+</script>
+
+<div class="Timer">
+  <p>運命の時間まで</p>
+  <div id="TimeLeft"></div>
+</div>
+	<footer>
+		&copy 2017 g1527043
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
