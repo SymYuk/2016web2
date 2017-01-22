@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -42,6 +43,111 @@
 </ul>
 <div id="pagepiling">
   <div class="contents" id="section1">
+  </div>
+  <div class="contents" id="section2">
+  </div>
+  <div class="contents" id="section3">
+  </div>
+  <div class="contents" id="section4">
+  </div>
+</div>
+</body>
+</html>
+-->
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+<head>
+<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#pagepiling').pagepiling({
+      menu: '#menu',
+      anchors: ['page1', 'page2', 'page3','page4'],
+      navigation: {
+        'position': 'right',
+        'tooltips': ['section1', 'section2', 'section3', 'section4']
+      },
+      scrollingSpeed: 1000,
+      sectionSelector: '.contents'
+    });
+  });
+</script>
+<style>
+#menu{
+  position: fixed;
+  z-index: 9999;
+}
+/*わかりやすくするためにセクションごとに背景色変えています*/
+#section1{background: #ff0;}
+#section2{background: #0f0;}
+#section3{background: #00f;}
+#section4{background: #aaa;}
+</style>
+</head>
+<body>
+<ul id="menu">
+　　<li data-menuanchor="page1" class="active"><a href="#page1">Page 1</a></li>
+　　<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
+　　<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
+　　<li data-menuanchor="page4"><a href="#page4">Page 4</a></li>
+</ul>
+ 
+<div id="pagepiling">
+  <div class="contents" id="section1">
     <!--contents01-->
   </div>
   <div class="contents" id="section2">
@@ -55,4 +161,3 @@
   </div>
 </div>
 </body>
-</html>
