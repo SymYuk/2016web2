@@ -60,7 +60,7 @@
 // 更にそれを60で割った余りとして、「分」で割った余りとしての『残時間の秒の部分』を出す
   var s = Math.floor((left % a_day) / 1000) % 60 % 60 
 
-  $("#TimeLeft").text(d + '日' + h + '時間' + m + '分' + s + '秒');
+  $("#TimeLeft").text(d + '日' + h + '時間' + m + '分' + s + '秒'+"ああ");
     setTimeout('countDown()', 1000);
   }
 </script>
