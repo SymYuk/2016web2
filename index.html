@@ -1,55 +1,65 @@
-<head>
-<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.min.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#pagepiling').pagepiling({
-      menu: '#menu',
-      anchors: ['page1', 'page2', 'page3','page4'],
-      navigation: {
-        'position': 'right',
-        'tooltips': ['section1', 'section2', 'section3', 'section4']
-      },
-      scrollingSpeed: 1000,
-      sectionSelector: '.contents'
-    });
-  });
-</script>
-<style>
-#menu{
-  position: fixed;
-  z-index: 9999;
-}
-/*わかりやすくするためにセクションごとに背景色変えています*/
-#section1{background: #ff0;}
-#section2{background: #0f0;}
-#section3{background: #00f;}
-#section4{background: #aaa;}
-</style>
-</head>
-<body text-center>
-<ul id="menu">
-　　<li data-menuanchor="page1" class="active"><a href="#page1">Pageaaaaa 1</a></li>
-　　<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
-　　<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
-　　<li data-menuanchor="page4"><a href="#page4">Page 4</a></li>
-</ul>
- 
-<div id="pagepiling">
-  <div class="contents" id="section1">
-    <!--contents01-->
-	  ようこそ。
-	  g1527043のサイトです。
-  </div>
-  <div class="contents" id="section2">
-    <!--contents02-->
-  </div>
-  <div class="contents" id="section3">
-    <!--contents03-->
-  </div>
-  <div class="contents" id="section4">
-    <!--contents04-->
-  </div>
-</div>
-</body>
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>g1527043</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	
+		<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+		<script type="text/javascript">
+ 			$(document).ready(function() {
+	  			$('#pagepiling').pagepiling({
+					menu: '#menu',
+					anchors: ['page1', 'page2', 'page3','page4'],
+					navigation: {
+						'position': 'right',
+						'tooltips': ['section1', 'section2', 'section3', 'section4']
+					},
+					scrollingSpeed: 1000,
+					sectionSelector: '.contents'
+				});
+			});
+		</script>
+		<style>
+			#menu{
+				position: fixed;
+				z-index: 9999;
+			}
+			#section1{background: #ff0;}
+			#section2{background: #0f0;}
+			#section3{background: #00f;}
+			#section4{background: #aaa;}
+		</style>
+	</head>
+	<body text-center>
+		<ul id="menu">
+			<li data-menuanchor="page1" class="active"><a href="#page1">Pageaaaaa 1</a></li>
+			<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
+			<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
+			<li data-menuanchor="page4"><a href="#page4">Page 4</a></li>
+		</ul>
+		<div id="pagepiling">
+			<div class="contents" id="section1">
+				<!--contents01-->
+				ようこそ。
+				g1527043のサイトです。 
+			</div>
+			<div class="contents" id="section2">  
+				<!--contents02-->
+  			</div>
+			<div class="contents" id="section3">
+				<!--contents03-->
+			</div>
+			<div class="contents" id="section4">
+				<!--contents04-->
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
