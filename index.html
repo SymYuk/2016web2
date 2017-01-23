@@ -14,12 +14,12 @@
  			$(document).ready(function() {
 	  			$('#pagepiling').pagepiling({
 					menu: '#menu',
-					anchors: ['page1', 'page2', 'page3','page4'],
+					anchors: ['page1', 'page2', 'page3'],
 					navigation: {
 						'position': 'right',
-						'tooltips': ['section1', 'section2', 'section3', 'section4']
+						'tooltips': ['', 'section2', 'section3']
 					},
-					scrollingSpeed: 1000,
+					scrollingSpeed: 2000,
 					sectionSelector: '.contents'
 				});
 			});
@@ -32,15 +32,13 @@
 			#section1{background: palegreen;}
 			#section2{background: pink;}
 			#section3{background: paleturquoise;}
-			#section4{background: plum;}
 		</style>
 	</head>
 	<body text-center>
 		<ul id="menu">
-			<li data-menuanchor="page1" class="active"><a href="#page1">Pageaaaaa 1</a></li>
-			<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
-			<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
-			<li data-menuanchor="page4"><a href="#page4">Page 4</a></li>
+			<li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
+			<li data-menuanchor="page2"><a href="#page2">Profile</a></li>
+			<li data-menuanchor="page3"><a href="#page3">Work</a></li>
 		</ul>
 		<div id="pagepiling">
 			<div class="contents" id="section1">
@@ -53,9 +51,6 @@
   			</div>
 			<div class="contents" id="section3">
 				<!--contents03-->
-			</div>
-			<div class="contents" id="section4">
-				<!--contents04-->
 			</div>
 		</div>
 
